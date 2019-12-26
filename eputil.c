@@ -1630,7 +1630,11 @@ void ChdirToSource (/*i/o*/ register req * r,
         _chdrive (drive[0] - 'A' + 1) ;
 #else
         Dirname (sInputfile, dir, sizeof (dir) - 1) ;
-        getcwd (r -> Component.sResetDir, sizeof (r -> Component.sResetDir) - 1) ;
+        if (! getcwd (r -> Component.sResetDir, sizeof (r -> Component.sResetDir) - 1) )
+	  {
+	    perror("could not getcwd() in eputil.c");
+	    exit(1);
+	  }
 #endif
         if (dir[0])
             {

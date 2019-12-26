@@ -1991,7 +1991,10 @@ int embperl_Execute	            (/*in*/  tReq *	  r,
 #ifdef WIN32
    	    _chdrive (r -> Component.nResetDrive) ;
 #endif
-	    chdir (r -> Component.sResetDir) ;
+	    if (chdir (r -> Component.sResetDir) < 0)
+	      {
+		rc = rcChdirError;
+	      }
 	    strcpy (r -> Component.sCWD,r -> Component.sResetDir) ;
 	    r -> Component.sResetDir[0] = '\0' ;
             }

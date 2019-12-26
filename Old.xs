@@ -150,7 +150,7 @@ CODE:
     SAVESPTR(diehook);
     diehook = Nullsv; 
     if (items > 0)
-        croak(">embperl_exit< request %d", SvIV(ST(0)));
+        croak(">embperl_exit< request %li", SvIV(ST(0)));
     else
         croak(">embperl_exit< component");
     LEAVE; /* we don't get this far, but croak() will rewind */

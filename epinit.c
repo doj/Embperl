@@ -1544,7 +1544,11 @@ int    embperl_SetupRequest (/*in*/ pTHX_
 
     
     r -> sInitialCWD = ep_palloc(pPool, PATH_MAX * 2) ;
-    getcwd (r -> sInitialCWD, PATH_MAX * 2 - 1) ;
+    if (! getcwd (r -> sInitialCWD, PATH_MAX * 2 - 1) )
+      {
+	perror("could not getcwd() in epinit.c");
+	exit(1);
+      }
 
     *ppReq = r ;
 
