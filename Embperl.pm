@@ -332,7 +332,7 @@ sub get_multipart_formdata
 	
 	$self -> log ("[$$]FORM: $_=$fdat->{$_}\n") if ($dbgForm) ; 
 
-	if (ref($fdat->{$_}) eq 'Fh') 
+	if (ref($fdat->{$_}) eq 'Fh' or ref($fdat->{$_}) =~ /File::Temp/) 
 	    {
 	    $fdat->{"-$_"} = $cgi -> uploadInfo($fdat->{$_}) ;
 	    }
