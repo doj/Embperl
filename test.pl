@@ -2118,7 +2118,7 @@ do
 	        unshift (@testargs, 'dbgbreak') if ($opt_dbgbreak) ;
     
 	        $txt = "#$testnum ". $file . ($debug != $defaultdebug ?"-d $debug ":"") . ($test->{msg} || '') . '...' ;
-	        $txt .= ' ' x (30 - length ($txt)) ;
+	        $txt .= ' ' x (50 - length ($txt)) ;
 	        print $txt ; 
     
     
@@ -2204,7 +2204,7 @@ do
 
 
 	    $txt2 = "$txt from file...";
-	    $txt2 .= ' ' x (30 - length ($txt2)) ;
+	    $txt2 .= ' ' x (50 - length ($txt2)) ;
 	    print $txt2 ; 
 
 	    unlink ($outfile) ;
@@ -2225,7 +2225,7 @@ do
 	    if ($err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "$txt from memory...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 
 		unlink ($outfile) ;
@@ -2247,7 +2247,7 @@ do
 	    if ($err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "$txt to memory...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 
 		my $outdata ;
@@ -2274,7 +2274,7 @@ do
 	    if ($err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "$txt to tied handle...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 
 		my $outdata ;
@@ -2303,7 +2303,7 @@ do
 	    if ($err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "$txt from/to memory...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 
 		my $outdata ;
@@ -2348,7 +2348,7 @@ do
 	    if ($err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "$txt to memory...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 
 		my $outdata ;
@@ -2382,7 +2382,7 @@ do
 	    if (0) #$err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "errornous parameter (path) ...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 
 		$err = eval { Embperl::Execute ({'inputfile'  => 'xxxx0',
@@ -2404,7 +2404,7 @@ do
 	    if ($err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "errornous parameter (input) ...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 		my $out ;
 		@errors = () ;
@@ -2431,7 +2431,7 @@ do
 	    if ($err == 0 || $opt_ignoreerror)
 		{
 		$txt2 = "errornous parameter (output) ...";
-		$txt2 .= ' ' x (30 - length ($txt2)) ;
+		$txt2 .= ' ' x (50 - length ($txt2)) ;
 		print $txt2 ; 
 		my $out ;
 		@errors = () ;
@@ -2481,7 +2481,7 @@ do
                     $page = $src ;
                                     
                     $txt2 = "$src ...";
-		    $txt2 .= ' ' x (30 - length ($txt2)) ;
+		    $txt2 .= ' ' x (50 - length ($txt2)) ;
 		    print $txt2 ; 
 
 		    my $outdata ;
@@ -2999,7 +2999,7 @@ do
 		}
     
 	    $txt = "#$testnum $file" . ($debug != $defaultdebug ?"-d $debug ":"") . '...' ;
-	    $txt .= ' ' x (30 - length ($txt)) ;
+	    $txt .= ' ' x (50 - length ($txt)) ;
 	    print $txt ; 
 	    unlink ($outfile) ;
 	    

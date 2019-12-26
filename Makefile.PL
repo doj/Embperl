@@ -1451,6 +1451,11 @@ foreach $f (@bins)
 		    #else
 		    #	{
                     	s/^\#\!.*?perl.*?\s(.*?)/#!$perlbinpath $1/ ;
+                    	# For some reason $perlbinpath contains double
+                    	# quotes which Apache doesn't like at all for
+                    	# CGI script interpreters. So remove them
+                    	# again.
+                    	s/^\#\!"(.*?)"/#!$1/;
 		    #	}
 		    s/^.*?perl.*?\s-x/$perlbinpath -x/ ;
                     }

@@ -1506,8 +1506,8 @@ int     embperl_ExecuteRequest  (/*in*/ pTHX_
 #ifdef DMALLOC
 			    /* unsigned long mark, int not_freed_b, int freed_b, int details_b */
     dmalloc_log_changed (nMemCheckpoint, 1, 0, 1) ;
-    dmalloc_message ( "[%d]Request freed. Exit-SVs: %d -OBJs: %d\n", getpid(),
-	    sv_count, sv_objcount) ;
+    dmalloc_message ( "[%d]Request freed. Exit-SVs: %d\n", getpid(),
+	    sv_count) ;
     if (nMemCheckpoint2)
         {
         dmalloc_message ( "***TO PREVIOUS REQUEST***\n") ;

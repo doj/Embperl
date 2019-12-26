@@ -325,9 +325,6 @@
 #ifndef sv_count
 #define sv_count PL_sv_count
 #endif
-#ifndef sv_objcount
-#define sv_objcount PL_sv_objcount
-#endif
 #ifndef op_mask
 #define op_mask PL_op_mask
 #endif
