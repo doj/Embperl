@@ -781,7 +781,7 @@ if ($b && $apache && $apache_src ne '')
         }
     else
 	{
-        $i = "-I$inc_dir -I$apache_src/regex -I$apache_src/os/unix" ; 
+        $i = "-I$inc_dir -I$apache_src/regex -I$apache_src/os/unix -I." ;
         $o = '' ;
         }
 
