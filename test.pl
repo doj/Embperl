@@ -435,8 +435,15 @@
         'errors'     => 9,
         'version'    => 2,
         'repeat'     => 2,
-        'condition'  => '$] >= 5.018000', 
+        'condition'  => '$] >= 5.018000 && $] < 5.019400', 
         'cmpext'     => '518',
+        },
+    'includeerr2.htm' => { 
+        'errors'     => 7,
+        'version'    => 2,
+        'repeat'     => 2,
+        'condition'  => '$] >= 5.019400', 
+        'cmpext'     => '520',
         },
     'includeerr3.htm' => { 
         'errors'     => 2,
