@@ -271,34 +271,34 @@ contain the following entries:
 
 =over
 
-=item 0
+=item C<0>
 
 Key for into data hashref
 
-=item 1
+=item C<1>
 
 Text to display
 
-=item 2
+=item C<2>
 
 Colspan (how many colums this cell should span)
 
-=item 3
+=item C<3>
 
 If set a control is displayed instead of a text. Must contain:
 
 radio,<name>,<value> or checkbox,<name>,<value>
 
-=item 4
+=item C<4>
 
 Display as link. This item contains the name of the key in the data hashref
 that holds the href.
 
-=item 5
+=item C<5>
 
 target for link
 
-=item 6
+=item C<6>
 
 Name of filter function. The value of the cell is process through this filter.
 Filter functions are passed as hashref of subs in the parameter 'filters' .

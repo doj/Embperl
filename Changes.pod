@@ -1,6 +1,8 @@
 =pod
 
-=head 2.5.0  16. March 2014
+=encoding iso8859-1
+
+=head1 2.5.0  16. March 2014
 
     - Do not clear old code before compiling a Embperl page
       in Perl >= 5.14.x because it causes seg faults. This
@@ -59,7 +61,7 @@
     
     Adaptions to Perl 5.14/16 were sponsored by NUREG GmbH
 
-=head 2.4.0  4. Oct 2010
+=head1 2.4.0  4. Oct 2010
 
     - Support for CGI.pm 3.43 (included within Perl 5.10.1)
       for file uplaods. CGI.pm < 2.43 is not supported anymore.

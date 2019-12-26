@@ -1,5 +1,7 @@
 =pod
 
+=encoding iso8859-1
+
 =head1 NAME
 
 Embperl::Features - Features von Embperl 2.0

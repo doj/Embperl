@@ -30,6 +30,8 @@ BEGIN
 
 $VERSION = '2.5.0' ;
 
+=encoding iso8859-1
+
 =head1 NAME
 
 Embperl::Form::Validate - Form validation with server- and client-side support.

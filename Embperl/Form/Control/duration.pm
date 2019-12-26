@@ -113,6 +113,8 @@ __END__
 
 =pod
 
+=encoding iso8859-1
+
 =head1 NAME
 
 Embperl::Form::Control::price - A price input control with optional unit inside an Embperl Form

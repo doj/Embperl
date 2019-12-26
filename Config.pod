@@ -1,4 +1,4 @@
-
+=encoding iso8859-1
 
 =head1 NAME
 
@@ -2004,22 +2004,22 @@ Tells Embperl how to handle escape sequences that are found in the source.
 
 =over 
 
-=item 0
+=item C<0>
 
 don't interpret input (default)
 
 
-=item 1   
+=item C<1>
 
 unescape html escapes to their characters (i.e. &lt; becomes < )
 inside of Perl code
 
-=item 2
+=item C<2>
 
 unescape url escapes to their characters (i.e. %26; becomes & )
 inside of Perl code
 
-=item 3
+=item C<3>
 
 unescape html and url escapes, depending on the context
 
