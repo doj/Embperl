@@ -34,16 +34,8 @@
 #undef getenv
 #undef getpid
 
-/* define get thread id if not already done by Apache */
-#ifndef gettid
 #ifdef WIN32
 #define gettid GetCurrentThreadId
-#else
-static int gettid()
-    {
-    return 0 ;
-    }
-#endif
 #endif
 
 #ifndef APACHE2
